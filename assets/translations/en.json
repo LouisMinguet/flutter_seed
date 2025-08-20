@@ -1,0 +1,27 @@
+{
+  "settings": {
+    "title": "Settings",
+    "general": "General",
+    "language": "Language",
+    "language_subtitle": "System default",
+    "support": "Support & Infos",
+    "rate": "Rate the app",
+    "share": "Share the app",
+    "contact": "Contact support",
+    "terms": "Terms of Use & Privacy Policy",
+    "about": "About Us"
+  },
+  "terms": {
+    "title": "Terms of Use & Privacy Policy",
+    "content": "This application, {appName}, is provided as a general-purpose starter template. By using this app, you agree to the following:\n\n- The app is offered as is, without any guarantee of reliability or fitness for a particular purpose.\n- No personal data is collected, stored, or shared by default.\n- If future versions connect to third-party services (e.g. Firebase, analytics), any collected data will be handled responsibly and only to improve the user experience.\n- You remain responsible for how you use the app and any content you create or share through it.\n\nFor questions, support, or feedback, please contact us at {supportEmail}."
+  },
+  "about": {
+    "title": "About Us",
+    "content": "This application is developed by Louis from MGT Bros. Here you can add useful information about the developer, the company, and anything else you want to share."
+  },
+  "navbar": {
+    "home": "Home",
+    "middle": "Your Page",
+    "settings": "Settings"
+  }
+}

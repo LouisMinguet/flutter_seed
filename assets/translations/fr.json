@@ -1,0 +1,27 @@
+{
+  "settings": {
+    "title": "Paramètres",
+    "general": "Général",
+    "language": "Langue",
+    "language_subtitle": "Par défaut du système",
+    "support": "Support & Infos",
+    "rate": "Noter l'application",
+    "share": "Partager l'application",
+    "contact": "Contacter le support",
+    "terms": "Conditions d'utilisation & Confidentialité",
+    "about": "À propos"
+  },
+  "terms": {
+    "title": "Conditions d'utilisation & Politique de confidentialité",
+    "content": "Cette application, {appName}, est fournie comme un modèle de démarrage générique. En utilisant cette application, vous acceptez ce qui suit :\n\n- L'application est fournie telle quelle, sans aucune garantie de fiabilité ou d'adéquation à un usage particulier.\n- Aucune donnée personnelle n'est collectée, stockée ou partagée par défaut.\n- Si de futures versions se connectent à des services tiers (par ex. Firebase, analytics), toutes les données collectées seront traitées de manière responsable et uniquement pour améliorer l'expérience utilisateur.\n- Vous restez responsable de la façon dont vous utilisez l'application et de tout contenu que vous créez ou partagez.\n\nPour toute question, support ou retour, veuillez nous contacter à {supportEmail}."
+  },
+  "about": {
+    "title": "À propos",
+    "content": "Cette application est développée par Louis de MGT Bros. Ici, vous pouvez ajouter les informations utiles à propos du développeur, de l’entreprise et de tout ce que vous souhaitez mettre en avant."
+  },
+  "navbar": {
+    "home": "Accueil",
+    "middle": "Votre page",
+    "settings": "Paramètres"
+  }
+}
