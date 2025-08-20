@@ -26,9 +26,9 @@ Elle inclut déjà la navigation, la gestion du thème, de la langue, l’analyt
 ## ✨ Fonctionnalités
 - 📱 **Responsive UI** avec flutter_sizer
 - 🧭 **Navigation** avec GoRouter
-- 🌐 **Localisation** (multi-langues : EN, FR, ES incluses)
+- 🌐 **Localisation** avec easy_localization (multi-langues : EN, FR, ES incluses)
 - 🎨 **Thèmes** (couleurs, typographie, espacements centralisés)
-- 📊 **Firebase Analytics** (désactivé en debug)
+- 📊 **Firebase Analytics**
 - 📝 **Logger** pour un débogage propre
 - 🗂️ **Architecture scalable** prête à cloner
 
@@ -66,7 +66,7 @@ flutter run
 
 ## 🔄 Renommer le projet
 
-Si vous clonez ce dépôt, vous voudrez probablement le personnaliser.
+Si vous clonez ce dépôt, vous devez le personnaliser.
 
 ### 1. Renommer le dossier
 ```bash
@@ -94,7 +94,7 @@ rename setBundleId --targets android,ios com.mycompany.mynewapp
 - `flutter_sizer`
 - `logger`
 - `easy_localization`
-- `firebase_core`, `firebase_analytics` (optionnels)
+- `firebase_core`, `firebase_analytics`
 
 ---
 
@@ -116,11 +116,6 @@ android/app/google-services.json
 ios/Runner/GoogleService-Info.plist
 lib/firebase_options.dart
 ```
-
-Utilisez plutôt des exemples :
-- `android/app/google-services.example.json`
-- `ios/Runner/GoogleService-Info.example.plist`
-- `lib/firebase_options.example.dart`
 
 ---
 
@@ -149,17 +144,17 @@ MIT — libre d’utilisation, modification et distribution.
 ---
 
 ## Overview
-**flutter_seed** is a lightweight Flutter **starter app**, built to serve as a clean boilerplate for any new project.  
-It includes routing, theming, localization, analytics, and a scalable architecture.
+**flutter_seed** is a lightweight Flutter **starter app**, designed to serve as a base for your projects.  
+It already includes navigation, theming, localization, analytics, and a clear architecture.
 
 ---
 
 ## ✨ Features
 - 📱 **Responsive UI** with flutter_sizer
 - 🧭 **Navigation** with GoRouter
-- 🌐 **Localization** (multi-language: EN, FR, ES included)
+- 🌐 **Localization** with easy_localization (multi-language: EN, FR, ES included)
 - 🎨 **Theming** (colors, typography, spacing centralized)
-- 📊 **Firebase Analytics** (disabled in debug)
+- 📊 **Firebase Analytics**
 - 📝 **Logger** for clean debugging
 - 🗂️ **Scalable architecture** ready to clone
 
@@ -197,7 +192,7 @@ flutter run
 
 ## 🔄 Rename the project
 
-If you clone this repository, you probably want to customize it.
+If you clone this repository, you need to customize it.
 
 ### 1. Rename the folder
 ```bash
@@ -225,13 +220,13 @@ rename setBundleId --targets android,ios com.mycompany.mynewapp
 - `flutter_sizer`
 - `logger`
 - `easy_localization`
-- `firebase_core`, `firebase_analytics` (optional)
+- `firebase_core`, `firebase_analytics`
 
 ---
 
 ## 🌐 Localization
 Translations are handled with **easy_localization**.  
-Usage example:
+Example usage:
 ```dart
 Text('settings.title'.tr())
 ```
@@ -240,7 +235,7 @@ Text('settings.title'.tr())
 
 ## ⚠️ Firebase files
 ⚠️ **Never commit your real Firebase config files**.  
-Add them to `.gitignore`:
+Add these files to `.gitignore`:
 
 ```gitignore
 android/app/google-services.json
@@ -248,12 +243,7 @@ ios/Runner/GoogleService-Info.plist
 lib/firebase_options.dart
 ```
 
-Use example files instead:
-- `android/app/google-services.example.json`
-- `ios/Runner/GoogleService-Info.example.plist`
-- `lib/firebase_options.example.dart`
-
 ---
 
 ## 📜 License
-MIT — free to use, modify and share.  
+MIT — free to use, modify and distribute.  
