@@ -1,0 +1,142 @@
+# ------------------------------
+# Miscellaneous
+# ------------------------------
+*.class
+*.lock
+*.log
+*.tmp
+*.pyc
+*.swp
+*.swo
+*.iml
+.DS_Store
+Thumbs.db
+.buildlog/
+.history
+
+# IDEs
+.idea/
+.vscode/
+*.xcworkspace/
+xcuserdata/
+
+# ------------------------------
+# Flutter / Dart
+# ------------------------------
+.dart_tool/
+.flutter-plugins
+.flutter-plugins-dependencies
+.melos_tool/
+.packages
+.packages.generated
+.pub/
+.pub-preload-cache/
+build/
+coverage/
+doc/api/
+analysis_benchmark.json
+
+# Dev / repo-specific
+/bin/cache/
+/bin/internal/
+/dev/benchmarks/
+/dev/bots/
+/dev/docs/
+/packages/flutter/coverage/
+version
+
+# Generated files
+**/generated_plugin_registrant.dart
+flutter_*.png
+linked_*.ds
+unlinked.ds
+unlinked_spec.ds
+
+# ------------------------------
+# Firebase
+# ------------------------------
+lib/firebase_options.dart
+android/app/google-services.json
+ios/Runner/GoogleService-Info.plist
+.firebase/
+.firebaserc
+android/app/src/main/assets/crashlytics-build.properties
+android/app/src/main/assets/crashlytics/com.crashlytics.build_id.xml
+
+# ------------------------------
+# Android
+# ------------------------------
+.gradle/
+**/android/**/gradle-wrapper.jar
+**/android/captures/
+**/android/local.properties
+**/android/key.properties
+**/android/**/GeneratedPluginRegistrant.java
+*.jks
+*.keystore
+
+# ------------------------------
+# iOS
+# ------------------------------
+**/ios/**/*.mode1v3
+**/ios/**/*.mode2v3
+**/ios/**/*.pbxuser
+**/ios/**/*.perspectivev3
+**/ios/**/DerivedData/
+**/ios/**/Pods/
+**/ios/**/.symlinks/
+**/ios/**/profile
+**/ios/.generated/
+**/ios/Flutter/ephemeral
+**/ios/Flutter/.last_build_id
+**/ios/Flutter/App.framework
+**/ios/Flutter/Flutter.framework
+**/ios/Flutter/Flutter.podspec
+**/ios/Flutter/Generated.xcconfig
+**/ios/ServiceDefinitions.json
+**/ios/Runner/GeneratedPluginRegistrant.*
+*.ipa
+
+# ------------------------------
+# macOS
+# ------------------------------
+**/macos/Pods/
+**/macos/Flutter/ephemeral
+**/macos/Flutter/GeneratedPluginRegistrant.swift
+
+# ------------------------------
+# Windows
+# ------------------------------
+**/windows/flutter/generated_plugin_registrant.cc
+**/windows/flutter/generated_plugin_registrant.h
+**/windows/flutter/generated_plugins.cmake
+*.exe
+*.dll
+*.pdb
+
+# ------------------------------
+# Linux
+# ------------------------------
+**/linux/flutter/generated_plugin_registrant.cc
+**/linux/flutter/generated_plugin_registrant.h
+**/linux/flutter/generated_plugins.cmake
+*.so
+
+# ------------------------------
+# Big files
+# ------------------------------
+*.apk
+*.aab
+*.ipa
+*.dSYM.zip
+*.dSYM
+
+# ------------------------------
+# Exceptions
+# ------------------------------
+!**/ios/**/default.mode1v3
+!**/ios/**/default.mode2v3
+!**/ios/**/default.pbxuser
+!**/ios/**/default.perspectivev3
+!/packages/flutter_tools/test/data/dart_dependencies_test/**/.packages
+!/dev/ci/**/Gemfile.lock
