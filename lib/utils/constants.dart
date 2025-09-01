@@ -7,6 +7,8 @@ class AppConstants {
   static const String appName = 'Flutter Seed';
   static const String companyName = 'Your Company';
   static const String supportEmail = 'support@yourcompany.com';
+  static const String androidAppId = 'com.yourcompany.appname';
+  static const String iOSAppId = 'id';
 
   static const String appVersion = '1.0.0'; // To change before every update.
 

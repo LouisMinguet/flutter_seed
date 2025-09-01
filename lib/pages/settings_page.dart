@@ -1,10 +1,12 @@
 // lib/pages/settings_page.dart
 
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
-import 'package:easy_localization/easy_localization.dart';
 
+import '../services/share_app_service.dart';
 import '../utils/constants.dart';
+import '../utils/logger.dart';
 import '../widgets/separators.dart';
 
 class SettingsPage extends StatefulWidget {
@@ -39,17 +41,22 @@ class _SettingsPageState extends State<SettingsPage> {
               ),
               trailing: const Icon(Icons.chevron_right),
               onTap: () async {
-                final RenderBox button = context.findRenderObject() as RenderBox;
+                logger.i("Changing language");
+
+                final RenderBox button =
+                    context.findRenderObject() as RenderBox;
                 final RenderBox overlay =
-                Overlay.of(context).context.findRenderObject() as RenderBox;
+                    Overlay.of(context).context.findRenderObject() as RenderBox;
 
                 final selected = await showMenu<Locale>(
                   context: context,
                   position: RelativeRect.fromRect(
                     Rect.fromPoints(
                       button.localToGlobal(Offset.zero, ancestor: overlay),
-                      button.localToGlobal(button.size.bottomRight(Offset.zero),
-                          ancestor: overlay),
+                      button.localToGlobal(
+                        button.size.bottomRight(Offset.zero),
+                        ancestor: overlay,
+                      ),
                     ),
                     Offset.zero & overlay.size,
                   ),
@@ -76,31 +83,27 @@ class _SettingsPageState extends State<SettingsPage> {
               },
             ),
 
-
             Separator.normal(),
 
             // --------- Support ----------
             _SectionHeader("$TR_CODE.support".tr()),
             ListTile(
-              leading: const Icon(Icons.star_border),
-              title: Text("$TR_CODE.rate".tr()),
-              onTap: () {
-                // TODO: ouvrir in_app_review
-              },
-            ),
-            ListTile(
               leading: const Icon(Icons.share_outlined),
               title: Text("$TR_CODE.share".tr()),
-              onTap: () {
-                // TODO: partager lien de l’app
+              onTap: () async {
+                logger.i("Sharing app");
+
+                ShareAppService.shareApp(context);
               },
             ),
+
             ListTile(
               leading: const Icon(Icons.mail_outline),
               title: Text("$TR_CODE.contact".tr()),
               subtitle: Text(AppConstants.supportEmail),
               onTap: () {
                 // TODO: ouvrir mailto ou formulaire de contact
+                logger.i("Contacting support");
               },
             ),
             ListTile(
@@ -108,6 +111,7 @@ class _SettingsPageState extends State<SettingsPage> {
               title: Text("$TR_CODE.terms".tr()),
               trailing: const Icon(Icons.chevron_right),
               onTap: () {
+                logger.i("Terms of service");
                 context.pushNamed('terms');
               },
             ),
@@ -116,6 +120,7 @@ class _SettingsPageState extends State<SettingsPage> {
               title: Text("$TR_CODE.about".tr()),
               trailing: const Icon(Icons.chevron_right),
               onTap: () {
+                logger.i("About page");
                 context.pushNamed('about');
               },
             ),
@@ -152,10 +157,7 @@ class _SectionHeader extends StatelessWidget {
         AppConstants.normalSpace,
         AppConstants.smallSpace,
       ),
-      child: Text(
-        text,
-        style: Theme.of(context).textTheme.titleMedium,
-      ),
+      child: Text(text, style: Theme.of(context).textTheme.titleMedium),
     );
   }
 }

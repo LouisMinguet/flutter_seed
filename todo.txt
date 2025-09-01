@@ -1,0 +1,6 @@
+TODO :
+- Logger
+- Futter Analytics
+- Rate app
+- Share app
+- Contact button
