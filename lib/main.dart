@@ -3,7 +3,6 @@ import 'package:firebase_analytics/firebase_analytics.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_seed/utils/router.dart';
-import 'package:shared_preferences/shared_preferences.dart';
 import 'package:sizer/sizer.dart';
 
 import 'firebase_options.dart';
@@ -15,8 +14,8 @@ Future<void> main() async {
   await EasyLocalization.ensureInitialized();
 
   // TEMP DEV > TO REMOVE
-  final prefs = await SharedPreferences.getInstance();
-  await prefs.clear();
+  // final prefs = await SharedPreferences.getInstance();
+  // await prefs.clear();
 
   // Initialisation Firebase
   await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);

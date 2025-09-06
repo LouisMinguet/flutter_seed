@@ -16,10 +16,10 @@ class _HomePageState extends State<HomePage> {
   @override
   void initState() {
     super.initState();
-    // Vérifier le consentement après le build
     WidgetsBinding.instance.addPostFrameCallback((_) {
       _checkAnalyticsConsent();
     });
+    AnalyticsService.logAppOpen();
   }
 
   Future<void> _checkAnalyticsConsent() async {

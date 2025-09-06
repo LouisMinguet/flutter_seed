@@ -6,11 +6,12 @@ import 'package:go_router/go_router.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 import '../pages/home_page.dart';
+import '../pages/onboarding_page.dart';
 import '../pages/placeholder_page.dart';
 import '../pages/settings/terms.dart';
 import '../pages/settings_page.dart';
-import '../pages/onboarding_page.dart';
 import '../widgets/bottom_nav_scaffold.dart';
+import 'analytics_route_observer.dart';
 
 /// Root navigator (pour les routes globales comme l'onboarding)
 final _rootNavigatorKey = GlobalKey<NavigatorState>();
@@ -28,9 +29,8 @@ final GoRouter router = GoRouter(
     GoRoute(
       path: '/onboarding',
       name: 'onboarding',
-      pageBuilder: (context, state) => const NoTransitionPage(
-        child: OnBoardingPage(),
-      ),
+      pageBuilder: (context, state) =>
+          const NoTransitionPage(child: OnBoardingPage()),
     ),
     GoRoute(
       path: '/terms',
@@ -43,8 +43,6 @@ final GoRouter router = GoRouter(
       builder: (context, state) => const AboutPage(),
     ),
 
-
-    // --------- Shell with BottomNav for pages ----------
     StatefulShellRoute.indexedStack(
       builder: (context, state, navigationShell) {
         return BottomNavScaffold(navigationShell: navigationShell);
@@ -56,9 +54,8 @@ final GoRouter router = GoRouter(
             GoRoute(
               path: '/',
               name: 'home',
-              pageBuilder: (context, state) => const NoTransitionPage(
-                child: HomePage(),
-              ),
+              pageBuilder: (context, state) =>
+                  const NoTransitionPage(child: HomePage()),
             ),
           ],
         ),
@@ -68,9 +65,8 @@ final GoRouter router = GoRouter(
             GoRoute(
               path: '/placeholder',
               name: 'placeholder',
-              pageBuilder: (context, state) => const NoTransitionPage(
-                child: PlaceholderPage(),
-              ),
+              pageBuilder: (context, state) =>
+                  const NoTransitionPage(child: PlaceholderPage()),
             ),
           ],
         ),
@@ -80,17 +76,16 @@ final GoRouter router = GoRouter(
             GoRoute(
               path: '/settings',
               name: 'settings',
-              pageBuilder: (context, state) => const NoTransitionPage(
-                child: SettingsPage(),
-              ),
+              pageBuilder: (context, state) =>
+                  const NoTransitionPage(child: SettingsPage()),
             ),
           ],
+          observers: [AnalyticsRouteObserver()],
         ),
       ],
     ),
   ],
 
-  // Redirection for onboarding
   redirect: (context, state) async {
     final prefs = await SharedPreferences.getInstance();
     final hasSeen = prefs.getBool('hasSeenOnboarding') ?? false;
