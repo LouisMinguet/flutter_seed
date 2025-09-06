@@ -2,6 +2,7 @@
 
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:go_router/go_router.dart';
 
 import '../services/share_app_service.dart';
@@ -101,8 +102,17 @@ class _SettingsPageState extends State<SettingsPage> {
               leading: const Icon(Icons.mail_outline),
               title: Text("$TR_CODE.contact".tr()),
               subtitle: Text(AppConstants.supportEmail),
-              onTap: () {
-                // TODO: ouvrir mailto ou formulaire de contact
+              onTap: () async {
+                // Copy email to clipboard and show a snackbar
+                await Clipboard.setData(
+                  const ClipboardData(text: AppConstants.supportEmail),
+                );
+
+                if (context.mounted) {
+                  ScaffoldMessenger.of(context).showSnackBar(
+                    SnackBar(content: Text("$TR_CODE.copied_email".tr())),
+                  );
+                }
                 logger.i("Contacting support");
               },
             ),

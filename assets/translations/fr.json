@@ -9,7 +9,8 @@
     "share": "Partager l'application",
     "contact": "Contacter le support",
     "terms": "Conditions d'utilisation & Confidentialité",
-    "about": "À propos"
+    "about": "À propos",
+    "copied_email": "Adresse e-mail copiée dans le presse-papiers !"
   },
   "terms": {
     "title": "Conditions d'utilisation & Politique de confidentialité",
@@ -23,5 +24,15 @@
     "home": "Accueil",
     "middle": "Votre page",
     "settings": "Paramètres"
+  },
+  "analytics_consent": {
+    "title": "Améliorer votre expérience",
+    "description": "Nous aimerions collecter des statistiques anonymes pour améliorer l'application.",
+    "anonymous": "100% anonyme",
+    "no_personal": "Aucune donnée personnelle",
+    "improve": "Aide à améliorer l'app",
+    "accept": "Accepter",
+    "decline": "Refuser",
+    "privacy_policy": "Politique de confidentialité"
   }
 }

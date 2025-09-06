@@ -9,7 +9,8 @@
     "share": "Share the app",
     "contact": "Contact support",
     "terms": "Terms of Use & Privacy Policy",
-    "about": "About Us"
+    "about": "About Us",
+    "copied_email": "Email copied to clipboard!"
   },
   "terms": {
     "title": "Terms of Use & Privacy Policy",
@@ -23,5 +24,15 @@
     "home": "Home",
     "middle": "Your Page",
     "settings": "Settings"
+  },
+  "analytics_consent": {
+    "title": "Improve Your Experience",
+    "description": "We would like to collect anonymous statistics to improve the application.",
+    "anonymous": "100% anonymous",
+    "no_personal": "No personal data",
+    "improve": "Helps improve the app",
+    "accept": "Accept",
+    "decline": "Decline",
+    "privacy_policy": "Privacy Policy"
   }
 }
